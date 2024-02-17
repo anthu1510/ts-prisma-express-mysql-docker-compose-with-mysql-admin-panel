@@ -1,0 +1,33 @@
+{
+  "name": "docker-express-mysql-ts-prisma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsnd --respawn ./src/",
+    "build": "tsc",
+    "test": "dotenv -e .env -v NODE_ENV=test -- dotenv -e .env -p NODE_ENV",
+    "start": "node dist/",
+    "mig": "npx prisma migrate dev --name init && npx prisma generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.9.1",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
+    "password-hash": "^1.2.2",
+    "zod": "^3.22.4",
+    "zod-express-middleware": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.19",
+    "@types/password-hash": "^1.2.24",
+    "dotenv-cli": "^7.3.0",
+    "prisma": "^5.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}
